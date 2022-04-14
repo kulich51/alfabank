@@ -1,6 +1,5 @@
 package ru.exercise.alfabank.model;
 
-
 import java.util.Map;
 
 public class ImagesObject {
