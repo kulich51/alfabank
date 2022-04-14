@@ -105,6 +105,6 @@ class AlfabankApplicationTests {
     }
 
     private boolean isGifSizeGreaterThanZero() {
-        Assertions.assertTrue(currencyRateService.compareCurrencies(TESTED_CURRENCY).getBody().length > 0);
+        return currencyRateService.compareCurrencies(TESTED_CURRENCY).getBody().length > 0;
     }
 }
