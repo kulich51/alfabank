@@ -1,4 +1,4 @@
-package ru.exercise.alphabank;
+package ru.exercise.alfabank;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -6,10 +6,10 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @SpringBootApplication
 @EnableFeignClients
-public class AlphabankApplication {
+public class AlfabankApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(AlphabankApplication.class, args);
+        SpringApplication.run(AlfabankApplication.class, args);
     }
 
 }

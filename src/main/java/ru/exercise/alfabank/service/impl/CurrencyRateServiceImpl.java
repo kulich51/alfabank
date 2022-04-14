@@ -1,14 +1,14 @@
-package ru.exercise.alphabank.service.impl;
+package ru.exercise.alfabank.service.impl;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.*;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
-import ru.exercise.alphabank.client.CurrencyClient;
-import ru.exercise.alphabank.client.GifClient;
-import ru.exercise.alphabank.exception.CurrencyNotFoundException;
-import ru.exercise.alphabank.model.Rates;
-import ru.exercise.alphabank.service.CurrencyRateService;
+import ru.exercise.alfabank.client.CurrencyClient;
+import ru.exercise.alfabank.client.GifClient;
+import ru.exercise.alfabank.exception.CurrencyNotFoundException;
+import ru.exercise.alfabank.model.Rates;
+import ru.exercise.alfabank.service.CurrencyRateService;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;

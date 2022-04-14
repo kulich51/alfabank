@@ -1,4 +1,4 @@
-package ru.exercise.alphabank.service;
+package ru.exercise.alfabank.service;
 
 import org.springframework.http.ResponseEntity;
 

@@ -1,10 +1,10 @@
-package ru.exercise.alphabank.client;
+package ru.exercise.alfabank.client;
 
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
-import ru.exercise.alphabank.model.Rates;
+import ru.exercise.alfabank.model.Rates;
 
 @FeignClient(name = "currency", url = "${currency.url}")
 public interface CurrencyClient {
