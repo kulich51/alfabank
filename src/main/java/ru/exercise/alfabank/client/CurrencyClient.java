@@ -15,6 +15,6 @@ public interface CurrencyClient {
 
     @GetMapping(value = "/historical/{yesterday}.json" , params = {"app_id", "symbols"})
     Rates getYesterdayCurrencyRates(@PathVariable String yesterday,
-                                    @RequestParam String app_id,
+                                    @RequestParam(name = "app_id") String applicationId,
                                     @RequestParam String symbols);
 }

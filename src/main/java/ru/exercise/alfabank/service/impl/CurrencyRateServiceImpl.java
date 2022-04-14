@@ -59,7 +59,8 @@ public class CurrencyRateServiceImpl implements CurrencyRateService {
     ResponseEntity<byte[]> getGif(String url) {
 
         // Смотри https://developers.giphy.com/docs/optional-settings/#rendition-guide
-        // Для получения картинки в бинарном файле в заголовке Accept необходимо указать формат данных, отличный от значения по умолчанию
+        // Для получения картинки в бинарном файле в заголовке Accept
+        // необходимо указать формат данных, отличный от значения по умолчанию
         RestTemplate restTemplate = new RestTemplate();
         HttpHeaders headers = new HttpHeaders();
         headers.setAccept(Collections.singletonList(MediaType.IMAGE_GIF));

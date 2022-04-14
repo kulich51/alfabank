@@ -89,18 +89,22 @@ class AlfabankApplicationTests {
     @Test
     void testCompareCurrenciesWhenTodayAndYesterdayRatesEquals() {
         currentRates.getRates().put(TESTED_CURRENCY, TESTED_RATE);
-        Assertions.assertTrue(currencyRateService.compareCurrencies(TESTED_CURRENCY).getBody().length > 0);
+        Assertions.assertTrue(isGifSizeGreaterThanZero());
     }
 
     @Test
     void testCompareCurrenciesWhenTodayRateGreater() {
-        Assertions.assertTrue(currencyRateService.compareCurrencies(TESTED_CURRENCY).getBody().length > 0);
+        Assertions.assertTrue(isGifSizeGreaterThanZero());
     }
 
     @Test
     void testCompareCurrenciesWhenYesterdayRateGreater() {
         currentRates.getRates().put(TESTED_CURRENCY, TESTED_RATE);
         yesterdayRates.getRates().put(TESTED_CURRENCY, TESTED_RATE + 10);
+        Assertions.assertTrue(isGifSizeGreaterThanZero());
+    }
+
+    private boolean isGifSizeGreaterThanZero() {
         Assertions.assertTrue(currencyRateService.compareCurrencies(TESTED_CURRENCY).getBody().length > 0);
     }
 }

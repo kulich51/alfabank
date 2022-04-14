@@ -13,7 +13,6 @@ public class GifObject {
         this.data = data;
     }
 
-
     public List<ImagesObject> getData() {
         return data;
     }

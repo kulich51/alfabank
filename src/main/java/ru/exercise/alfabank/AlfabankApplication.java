@@ -11,5 +11,4 @@ public class AlfabankApplication {
     public static void main(String[] args) {
         SpringApplication.run(AlfabankApplication.class, args);
     }
-
 }
