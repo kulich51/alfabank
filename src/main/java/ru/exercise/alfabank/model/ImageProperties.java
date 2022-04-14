@@ -1,4 +1,4 @@
-package ru.exercise.alphabank.model;
+package ru.exercise.alfabank.model;
 
 public class ImageProperties {
 

@@ -1,4 +1,4 @@
-package ru.exercise.alphabank;
+package ru.exercise.alfabank;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -8,25 +8,25 @@ import org.junit.jupiter.params.provider.ValueSource;
 import org.mockito.Mock;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import ru.exercise.alphabank.client.CurrencyClient;
-import ru.exercise.alphabank.client.GifClient;
-import ru.exercise.alphabank.exception.CurrencyNotFoundException;
-import ru.exercise.alphabank.model.GifObject;
-import ru.exercise.alphabank.model.ImageProperties;
-import ru.exercise.alphabank.model.ImagesObject;
-import ru.exercise.alphabank.model.Rates;
-import ru.exercise.alphabank.service.impl.CurrencyRateServiceImpl;
+import ru.exercise.alfabank.client.CurrencyClient;
+import ru.exercise.alfabank.client.GifClient;
+import ru.exercise.alfabank.exception.CurrencyNotFoundException;
+import ru.exercise.alfabank.model.GifObject;
+import ru.exercise.alfabank.model.ImageProperties;
+import ru.exercise.alfabank.model.ImagesObject;
+import ru.exercise.alfabank.model.Rates;
+import ru.exercise.alfabank.service.impl.CurrencyRateServiceImpl;
 
 import java.util.HashMap;
 import java.util.Map;
 
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
-import static ru.exercise.alphabank.constant.AlphabankApplicationTestConstants.*;
+import static ru.exercise.alfabank.constant.AlfabankApplicationTestConstants.*;
 
 
 @SpringBootTest
-class AlphabankApplicationTests {
+class AlfabankApplicationTests {
 
     @Autowired
     private CurrencyRateServiceImpl currencyRateService;
@@ -89,18 +89,22 @@ class AlphabankApplicationTests {
     @Test
     void testCompareCurrenciesWhenTodayAndYesterdayRatesEquals() {
         currentRates.getRates().put(TESTED_CURRENCY, TESTED_RATE);
-        Assertions.assertTrue(currencyRateService.compareCurrencies(TESTED_CURRENCY).getBody().length > 0);
+        Assertions.assertTrue(isGifSizeGreaterThanZero());
     }
 
     @Test
     void testCompareCurrenciesWhenTodayRateGreater() {
-        Assertions.assertTrue(currencyRateService.compareCurrencies(TESTED_CURRENCY).getBody().length > 0);
+        Assertions.assertTrue(isGifSizeGreaterThanZero());
     }
 
     @Test
     void testCompareCurrenciesWhenYesterdayRateGreater() {
         currentRates.getRates().put(TESTED_CURRENCY, TESTED_RATE);
         yesterdayRates.getRates().put(TESTED_CURRENCY, TESTED_RATE + 10);
+        Assertions.assertTrue(isGifSizeGreaterThanZero());
+    }
+
+    private boolean isGifSizeGreaterThanZero() {
         Assertions.assertTrue(currencyRateService.compareCurrencies(TESTED_CURRENCY).getBody().length > 0);
     }
 }

@@ -1,4 +1,4 @@
-package ru.exercise.alphabank.model;
+package ru.exercise.alfabank.model;
 
 import java.util.List;
 
@@ -12,7 +12,6 @@ public class GifObject {
     public GifObject(List<ImagesObject> data) {
         this.data = data;
     }
-
 
     public List<ImagesObject> getData() {
         return data;

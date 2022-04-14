@@ -1,4 +1,4 @@
-package ru.exercise.alphabank.exception;
+package ru.exercise.alfabank.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;

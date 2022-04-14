@@ -1,11 +1,11 @@
-package ru.exercise.alphabank.controller;
+package ru.exercise.alfabank.controller;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
-import ru.exercise.alphabank.service.CurrencyRateService;
+import ru.exercise.alfabank.service.CurrencyRateService;
 
 @RestController
 @RequestMapping("/currency")
